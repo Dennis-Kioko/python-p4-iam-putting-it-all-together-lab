@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from flask import request, session
+from flask import request, session, jsonify
 from flask_restful import Resource
 from sqlalchemy.exc import IntegrityError
 
@@ -9,6 +9,9 @@ from models import User, Recipe
 
 class Signup(Resource):
     pass
+
+
+api.add_resource(Signup, '/signup')
 
 class CheckSession(Resource):
     pass
